@@ -1,0 +1,26 @@
+/* =================
+  WRITE YOUR CSS HERE.
+  Check the ⌄ for help with formatting and validating your code.
+  You must write some CSS to complete this challenge.
+   ===================
+*/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&display=swap');
+body{
+ font-family:Open+Sans;
+   background-color:orange;
+  color:black;
+  style:bold;
+ width:100%;}
+
+header{justify-content:space-between;
+display:flex;
+margin:auto;
+background-color:purple;
+  align-items:center;
+}
+
+/* don't edit this */
+.jest-lite-report__status--pass {
+  background: var(--color-pass);
+}
+.jest-lite-report__errors { display:none }
