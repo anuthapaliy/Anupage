@@ -33,6 +33,7 @@ const getHeader = document.querySelectorAll("header"),
    The tests will run every time you update your code.
    ===================
 */
+
 test("There is at least one header element", () => {
   expect(getHeader.length).toBeGreaterThanOrEqual(1);
 });
@@ -63,6 +64,29 @@ test("There is at least one image", () => {
 test("There are at least 500 words on the page", () => {
   expect(getWords.length).toBeGreaterThanOrEqual(500);
 });
+var text;
 
+
+text = ['Two boys playing in the garden.', 'Eldest boy start to cry.', 'Dogs and birds are making noises.', 'Many people were in the road.', 'Two boys looks so scared and it becoma so quiet suddenly.', 'Mum came back from shopping.', 'lots of toys and fruits bag in the living area.', 'Kids told a story about road accident.', 'Mumma hugs both of her son and have their lunch.'];
+
+let element_story = document.getElementById('story');
+text.push(text[0]);
+element_story.innerText = text.shift();
+
+
+document.getElementById('next_page').addEventListener('click', (event) => {
+  let element_story2 = document.getElementById('story');
+  text.push(text[0]);
+  element_story2.innerText = text.shift();
+
+});
+
+document.getElementById('previous_page').addEventListener('click', (event) => {
+  let element_story3 = document.getElementById('story');
+  text.unshift(text.slice(-1)[0]);
+  element_story3.innerText = text.pop();
+
+});
 const console = document.getElementById("tests");
 prettify.toHTML(run(), console);
+
