@@ -100,14 +100,14 @@ element_carousel.setAttribute("src", images[0]);
 
 document.getElementById('next').addEventListener('click', (event) => {
   let element_carousel2 = document.getElementById('carousel');
-  images.unshift(images.pop());
+  images.push(images.shift());
   element_carousel2.setAttribute("src", images[0]);
 
 });
 
 document.getElementById('previous').addEventListener('click', (event) => {
   let element_carousel3 = document.getElementById('carousel');
-  images.unshift(images.shift());
-  element_carousel3.setAttribute("src", images[0]);
+  images.unshift(images.pop());
+  element_carousel3.setAttribute("src", images.slice(-1)[0]);
 
 });
